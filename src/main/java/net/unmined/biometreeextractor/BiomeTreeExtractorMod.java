@@ -61,7 +61,9 @@ public class BiomeTreeExtractorMod implements ModInitializer {
                             String.format("biometreeextract_%s.json", sanitizedDimensionName))
                     .toString();
 
-            var rootNode = multiNoiseBiomeSource.biomeEntries.right().get().value().getEntries().tree.firstNode;
+            var rootNode = multiNoiseBiomeSource.biomeEntries.right().isPresent()
+                    ? multiNoiseBiomeSource.biomeEntries.right().get().value().getEntries().tree.firstNode
+                    : multiNoiseBiomeSource.biomeEntries.left().get().tree.firstNode;
 
             try (var writer = new BufferedWriter(new FileWriter(fileName))) {
                 DumpTreeNode(rootNode, writer);
