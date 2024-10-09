@@ -16,7 +16,7 @@ The climate parameter ranges are extracted as arrays. The order of parameters in
 
 Requires the [Fabric API](https://modrinth.com/mod/fabric-api) mod to be installed.
 
-This version supports __Minecraft 1.21.2 snapshot 24w40a__.
+This version supports Minecraft __1.20+__, tested up to __1.21.2 pre1__.
 
 ## Usage
 
